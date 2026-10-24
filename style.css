@@ -1,0 +1,342 @@
+
+/* ArtVista - Common Website Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #f8f5ef;
+    --dark: #25241f;
+    --gold: #a47b43;
+    --muted: #77746d;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 5%;
+    background: var(--cream);
+    border-bottom: 1px solid #e5dfd4;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--dark);
+    color: white;
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--dark);
+}
+
+/* Home Page */
+
+.hero {
+    min-height: 520px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 65px 0;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.12;
+    margin: 18px 0;
+}
+
+.hero p {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.hero img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Sections */
+
+.section {
+    padding: 60px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2,
+.page-title {
+    font-family: Georgia, serif;
+    font-size: 36px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+/* Artwork Cards */
+
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.art-card {
+    background: white;
+    border: 1px solid #e8e2d8;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.art-card:hover {
+    transform: translateY(-5px);
+}
+
+.art-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.art-info {
+    padding: 18px;
+}
+
+.art-info h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.art-info p {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.text-link {
+    color: var(--gold);
+    font-weight: bold;
+}
+
+/* Artwork Detail Page */
+
+.art-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: start;
+    padding: 55px 0;
+}
+
+.art-detail > img {
+    width: 100%;
+    max-height: 620px;
+    object-fit: contain;
+    background: #eee7dc;
+}
+
+.art-description h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+.art-description p {
+    margin: 18px 0;
+    color: var(--muted);
+}
+
+.art-meta {
+    padding: 15px 0;
+    border-top: 1px solid #ddd5c8;
+    border-bottom: 1px solid #ddd5c8;
+}
+
+/* Login and Sign Up */
+
+.auth-wrapper {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 15px;
+}
+
+.auth-card {
+    background: white;
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    border: 1px solid #e8e2d8;
+    border-radius: 8px;
+}
+
+.auth-card h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.auth-card > p {
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc5b9;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.auth-card .btn {
+    width: 100%;
+}
+
+.form-message {
+    margin-top: 15px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 28px 15px;
+    margin-top: 35px;
+    border-top: 1px solid #e5dfd4;
+    color: var(--muted);
+}
+
+/* Responsive Design */
+
+@media (max-width: 750px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .hero,
+    .art-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .hero img {
+        height: 300px;
+    }
+
+    .art-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .art-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .art-description h1 {
+        font-size: 32px;
+    }
+
+    .auth-card {
+        padding: 24px;
+    }
+}
